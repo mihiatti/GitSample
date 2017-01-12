@@ -1,6 +1,6 @@
 ﻿namespace Sample1
 {
-    class Calc
+    class Calc : ICalc
     {
         public double Add(int a, int b)
         {
