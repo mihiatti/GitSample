@@ -10,5 +10,9 @@
         {
             return a / b;
         }
+        public int DivB(int a, int b)
+        {
+            return a / b;
+        }
     }
 }
