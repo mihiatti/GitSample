@@ -1,0 +1,128 @@
+Az alábbi feladatok mindegyikét a Visual studio Team explorer git klienssel végezd el.
+
+0. Hozz létre egy gitHub logint. Hozz létre benne egy GitSample repository-t.
+1. Cloneozd a GitHubos repository-t a gépedre.
+2. Adj hozzá egy új Console applicationt, repository-ba. Legyen a neve: Sample1.
+3. Nyitsd meg a tartalmazó mappát és jegyezd fel milyen git fájlokat találtál és mit tartalmaznak
+	
+	******
+	[.git]
+	.gitattributes
+	.gitignore	
+	******
+
+
+4. Ellenőrizd a változásokat a "Changes" menüpontban.
+	Jegyezd fel mi a különbség a staged és a changes állapotú fájlok közt?
+	
+	******
+	staged állapot az ami a commitba benne lesz
+	******
+	
+	
+5. Commitold a staged fájlokat. 
+6. Commitold a projekt minden fájlját.
+7. Módosítsd a main fügvényt és commitold a változtatásokat. Ezt ismételd meg háromszor.
+8. Töltsd fel a változtatásaid a szerverre.
+
+9. Hozz létre egy új class-t Calc néven.
+10. Commitold a változásaidat.
+11. Bővítsd a Calc class-t Add metódussal, majd commitold a változtatásaid.
+12. Bővítsd a Calc clast-t Div metódussal, majd commitold a változtatásaid.
+13. Bővítsd a Calc clast-t DivB metódussal, majd commitold a változtatásaid.
+
+13. Vond vissza az utolsó commitod úgy, hogy a módosítások ne vesszenek el.   ***** ????? *****
+14. Bővítsd a Calc clast-t DivD metódussal, majd commitold a változtatásaid. 
+15. Nyitsd meg a history-t és ellenőrizd milyen változásokat tartalmazott a 3. commitod a branch kezdete óta.
+
+16. Hozz létre egy új branchet feature/Calc néven.
+17. Checkoutolj a Calc branchre.
+18. Adj hozzá egy új interface-t a projektedhez ICalc néven.
+19. Vedd fel az inteface-be a Calc-ban lévő metódusokat, majd a Calc osztályod implementálja az ICalc interface-t.
+20. Commitold a változtatásaid.
+21. Adj az interfacehez egy Mult metódust, majd implementáld is a Calc utolsó soraiban. Commitold a változtatásaid.
+22. Ellenőrizd a history-t. Checkoutolj a master branchre. Ellenőrizd újból a history-t. Mit tapasztalsz a kódban?
+
+	******
+	hiányzik belőle az ICalc és a Calc osztály sem belőle származik
+	******
+
+23. Add hozzá a Calc osztályhoz a DivByZero nevű metódust.
+24. Checkoutolj a feature/Calc branchre. Mit tapasztalsz és miért?
+
+	******
+	hiányzik belőle DivByZero, mert nincs merge-lve a két branch egymással
+	******
+
+25. Hozz létre a master branchből egy master_help branchet.
+26. Checkoutolj a master_help branchre.
+27. Commitold a változtatásaid.
+28. Checkoutolj a feature/Calc branchre. Mi haszna volt a master_help branchnek?
+	
+	******
+	hogy abba commitáljuk bele a DivByZero-t , mert nem akartuk a master-be
+	******
+	
+29. Töröld ki a Calc osztályt.
+30. Vond vissza a változtatásaid a git segítségével.
+
+------------------------------------------------------------------------------------------------------------------
+
+31. Hozz létre egy új branchet a feature/Calc-ból feature/CalcHelper néven.
+32. Checkoutolj át a feature/CalcHelper-be.
+33. Addj hozzá egy új osztályt a projektedhez. Book néven, majd commitold a változtatásokat.
+34. Add hozzá a Book osztályhoz a Length propertyt, majd commitold a változtatásokat.
+35. Rebase segítségével mergeld a feature/CalcHelper branchet a feature/Calc branchbe.
+
+36. Hozz létre egy új branchet feature/Calc/BadMerging néven.
+37. Checkoutolj át a feature/Calc/BadMerging branchre.
+38. Módosítsd a Calc classnak az Add metódusát úgy, hogy írja ki a consolre-ra, hogy "add".
+39. Commitold a változtatsádaid.
+40. Nézd meg a history-t. Mit tapasztalsz? A rebase-t követően az új módosításaid a feature/CalcHelper-be commitolt változások után keletkeztek? Ha igen miért? Ha nem miért nem?
+
+	*****
+    Igen, mert rebase esetén automatikusan létrejön egy új commit, és abból fog leágazni az aktuális branch, és minden új commit ebből a pontból keletkezik.
+	*****
+---------------------------------------------------------------------------------------------------------------------
+41. Töröld a feature/Calc/BadMerging branchet.
+42. Mergeld a feature/Calc branchet a feature/CalcHelper-be.
+43. Hozz létre egy feature/Calc/GoodMerging	 branchet.
+44. Checkoutolj át a feature/Calc/GoodMerging branchre.
+45. Módosítsd a Calc classnak az Add metódusát úgy, hogy írja ki a consolre-ra, hogy "add".
+46. Commitold a változtatsádaid.
+47. Menj fel a GitHub-ra és ellenőrizd a history-t. Mit tapasztalsz a commitokat követően?
+
+	*****
+    Semmit, mert nem pusholtam fel.
+	*****
+	
+48. Nézd meg a history-t. Mit tapasztalsz? A rebase-t követően az új módosításaid a feature/CalcHelper-be commitolt változások után keletkeztek? Ha igen miért? Ha nem miért nem?
+49. Mergeld a feature/Calc/GoodMerging branchet a feature/Calc branchbe.
+50. Mergeld a feature/Calc branchet a master branchbe.
+51. Pushold a master branchet a szerverre. 
+51-b. Hasonlítsd össze a GitHub és a VS historyját. Mit tapasztalsz a push-t követően? 
+
+   *****
+   egyforma, minden fent van, szuper.
+   *****
+52. Törölj minden lokális branchet.
+53. Menj fel a GitHub-ra nézd meg historyt és hasonlítsd össze azzal, amit a VS-ben látsz.
+   
+   *****
+   semmi változás
+   *****
+
++1 Olvasd át az MS tutorialját a Git-ről
++2 Olvasd el figyelmesen a Git-scm.com oldal tutoriálját.
++3 try.github.io oldalon teljesítsd mindegyik szintet a gyakorló feladatsorból.
+
+Branchelni jó!
+
+Ellenőrző kérdések: 
+1. Mi a különbség a merge és a merge fast-forward közt?
+2. Milyen állapotai vannak egy fájlnak?
+3. Milyen praktikus megoldást tudsz arra, hogy ha van egy nem commitolt változtatásod, és át kell menned egy másik branchre, de nem szeretnéd ha  megmaradjon a branch historyjában?
+4. Miért érdemes gyakran commitolni és mire jók a branchek?
+5. Hogyan lehet egy már létezó repository-t letölteni a gépedre?
+6. Hogyan oldanád meg: A lokális branchbe sok commit történt, de mindezt egyben szeretnéd ha felkerülne a szerverre. 
+7. Mi lehet a hiba oka: Épp befejezted a bug javítását és commitoltad a változtatásaid, jelzed a tesztelőknek ezt. A vissza jelzésben azt állítják, hogy nem tapasztalnak semmi változást. (Kizárólag Version C. oldalról gondolkodj :) )
