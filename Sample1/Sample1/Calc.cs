@@ -18,5 +18,11 @@
         {
             return a / b;
         }
+
+        public int DivByZero(int a)
+        {
+            return a / 0;
+        }
+        
     }
 }
