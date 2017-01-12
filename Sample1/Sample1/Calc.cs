@@ -6,5 +6,9 @@
         {
             return a + b;
         }
+        public double Div(double a, double b)
+        {
+            return a / b;
+        }
     }
 }
