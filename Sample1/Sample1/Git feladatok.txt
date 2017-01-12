@@ -120,9 +120,36 @@ Branchelni jó!
 
 Ellenőrző kérdések: 
 1. Mi a különbség a merge és a merge fast-forward közt?
+   *****
+   merge esetén automatikusan létrejön egy új snapshot és arra egy commit és lesz a masterje a két branch-nek
+   fast worward esetén pedig ha lehet akkor csak a master pointert viszi arra a branchre amit merge-lni akartunk.
+   *****
 2. Milyen állapotai vannak egy fájlnak?
+
+   *****
+   untracked - nem követett fájlok
+   unmodified - követett nem de nem módosult fájlok
+   modified unstaged - módosult fájlok
+   staged - olyan változások, amiket a commitálni akarunk
+   *****
 3. Milyen praktikus megoldást tudsz arra, hogy ha van egy nem commitolt változtatásod, és át kell menned egy másik branchre, de nem szeretnéd ha  megmaradjon a branch historyjában?
+   *****
+   létrehozok egy helper branch-et és abba commitálom bele átmenetlieg
+   *****
 4. Miért érdemes gyakran commitolni és mire jók a branchek?
+   *****
+   könnyen vissza lehet állni egy adott állapotra
+   a branchek pillanatképek egy rendszer adott állapotáról
+   *****
 5. Hogyan lehet egy már létezó repository-t letölteni a gépedre?
+   *****
+   team explorerben	  manage connection fülön kapcsolódni kell egy repository-hoz
+   *****
 6. Hogyan oldanád meg: A lokális branchbe sok commit történt, de mindezt egyben szeretnéd ha felkerülne a szerverre. 
+   *****
+   visszavonom a commit-okat úgy, hogy a változások ne vesszenek el (reset and keep changes)
+   *****
 7. Mi lehet a hiba oka: Épp befejezted a bug javítását és commitoltad a változtatásaid, jelzed a tesztelőknek ezt. A vissza jelzésben azt állítják, hogy nem tapasztalnak semmi változást. (Kizárólag Version C. oldalról gondolkodj :) )
+   *****
+   nem lett felpusholva
+   *****
