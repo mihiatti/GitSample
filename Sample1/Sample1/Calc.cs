@@ -14,5 +14,9 @@
         {
             return a / b;
         }
+        public int DivD(int a, int b)
+        {
+            return a / b;
+        }
     }
 }
