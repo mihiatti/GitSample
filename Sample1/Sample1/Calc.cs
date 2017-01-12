@@ -1,9 +1,12 @@
-﻿namespace Sample1
+﻿using System;
+
+namespace Sample1
 {
     class Calc : ICalc
     {
         public double Add(int a, int b)
         {
+            Console.WriteLine("add");
             return a + b;
         }
         public double Div(double a, double b)
