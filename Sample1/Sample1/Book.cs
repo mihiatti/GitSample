@@ -2,5 +2,6 @@
 {
     class Book
     {
+        public int Length { get; set; }
     }
 }
